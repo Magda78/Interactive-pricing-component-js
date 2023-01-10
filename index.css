@@ -29,7 +29,7 @@ p {
 	color: #848ead;
 }
 hr {
-	border-top: 1px solid #d9d9d9;
+	border-top: 1px solid #ecf0fb;
 	width: 100%;
 	margin-bottom: 24px;
 }
@@ -102,12 +102,13 @@ main {
 .main__content__input input[type=range] {
 	-webkit-appearance: none;
 	width: 100%;
+    background: linear-gradient(90deg, rgb(236, 240, 251) 50%, rgb(236, 240, 251) 50%);
 }
 .main__content__input input[type=range]::-webkit-slider-runnable-track {
 	-webkit-appearance: none;
 	height: 8px;
 	border-radius: 5px;
-	background: #f1f4fc;
+    );
 }
 .main__content__input input[type=range]::-webkit-slider-thumb {
 	box-shadow: 10px 10px 20px #a8f6ed;
@@ -140,6 +141,10 @@ main {
 }
 .main__content__plan {
 	display: flex;
+	flex-direction: column;
+}
+.main__content__plan__items {
+	display: flex;
 	align-items: center;
 	justify-content: center;
 }
@@ -147,8 +152,8 @@ main {
 	margin-left: 16px;
 }
 .main__content__billing {
-    width: 100%;
-    margin-right: 11px;
+	width: 100%;
+	margin-right: 11px;
 	margin-top: 36px;
 	margin-bottom: 42px;
 	display: flex;
@@ -156,7 +161,7 @@ main {
 	align-items: center;
 }
 .main__content__billing p {
-    margin-left: 12px;
+	margin-left: 12px;
 }
 .main__content__billing__ofandon {
 	width: 43px;
@@ -164,7 +169,7 @@ main {
 	background-color: #cfd8ef;
 	border-radius: 15px;
 	position: relative;
-    margin-left: 12px;
+	margin-left: 12px;
 }
 .main__content__billing__ofandon__circle {
 	position: absolute;
@@ -176,7 +181,7 @@ main {
 	border-radius: 50%;
 }
 .main__content__billing__procent {
-    margin-left: 12px;
+	margin-left: 12px;
 }
 .main__content__billing__procent {
 	position: relative;
@@ -184,10 +189,69 @@ main {
 	height: 19px;
 	border-radius: 9.5px;
 	background-color: #feede8;
-    margin-left: 5px;
+	margin-left: 5px;
 }
 .main__content__billing__procent p {
 	position: absolute;
 	top: 2px;
 	color: #ff8d68;
+}
+@media (min-width: 769px) {
+	.main__content {
+		width: 540px;
+	}
+	.main__title h1 {
+		font-size: 28px;
+	}
+	.main__title h2 {
+		font-size: 15px;
+	}
+	.main__content {
+		padding-top: 58px;
+		align-items: start;
+		position: relative;
+	}
+	.main__content h3 {
+		padding-left: 48px;
+		margin-bottom: 42px;
+	}
+	.main__content__price {
+		position: absolute;
+		font-size: 40px;
+		top: 40px;
+		right: 48px;
+		margin: 0;
+	}
+	.main__content__price span {
+		font-size: 16px;
+	}
+	.main__content__input {
+		padding-right: 48px;
+		padding-left: 48px;
+		width: 100%;
+	}
+	.main__content__billing {
+		padding-right: 65px;
+		margin-top: 41px;
+		margin-bottom: 0;
+	}
+	hr {
+		margin-top: 40px;
+		margin-bottom: 32px;
+	}
+	.main__content__plan {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		justify-content: space-between;
+		align-items: center;
+		padding-left: 48px;
+		padding-right: 48px;
+	}
+	.main__content__plan button {
+		margin-top: 0;
+	}
+	button {
+		text: #ffffff;
+	}
 }
