@@ -34,7 +34,7 @@ hr {
 	margin-bottom: 24px;
 }
 button {
-	margin-top: 32px;
+	margin-top: 22px;
 	background-color: #293356;
 	padding: 12px 46px 13px 46px;
 	border-radius: 20.5px;
@@ -42,6 +42,9 @@ button {
 	font-size: 12px;
 	font-weight: bold;
 	cursor: pointer;
+}
+button:hover {
+	color: #ffffff;
 }
 body {
 	position: relative;
@@ -144,8 +147,14 @@ main {
 }
 .main__content__plan__items {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+}
+.main__content__plan__items__item {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-bottom: 10px;
 }
 .main__content__plan p {
 	margin-left: 16px;
@@ -192,21 +201,15 @@ main {
 	background-color: #ffffff;
 	border-radius: 50%;
 }
-.main__content__billing__procent {
-	margin-left: 12px;
-}
-.main__content__billing__procent {
-	position: relative;
-	width: 42px;
-	height: 19px;
+#procent__number {
 	border-radius: 9.5px;
 	background-color: #feede8;
 	margin-left: 5px;
-}
-.main__content__billing__procent p {
-	position: absolute;
-	top: 2px;
+	padding: 2px 8px 3px 7px;
 	color: #ff8d68;
+}
+#procent__text {
+	display: none;
 }
 @media (min-width: 769px) {
 	.main__content {
@@ -252,6 +255,18 @@ main {
 		margin-top: 40px;
 		margin-bottom: 32px;
 	}
+
+	.main__content__plan__items {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.main__content__plan__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: start;
+	}
 	.main__content__plan {
 		display: flex;
 		flex-direction: row;
@@ -261,10 +276,20 @@ main {
 		padding-left: 48px;
 		padding-right: 48px;
 	}
-	.main__content__plan button {
+	button {
 		margin-top: 0;
 	}
-	button {
-		text: #ffffff;
+	#procent__text {
+		display: contents;
+	}
+	#procent__number {
+		magin-left: 9px;
+	}
+	#procent__sign {
+		display: none;
+	}
+	.main__content__billing__procent p {
+		display: flex;
+		align-items: center;
 	}
 }

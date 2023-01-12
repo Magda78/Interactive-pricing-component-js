@@ -33,6 +33,10 @@ const sliderTrackHandler = () => {
 };
 
 input.oninput = () => {
+	if (toggleSwitch.classList.contains('main__content__billing__ofandon__circle__toggle')) {
+		toggleSwitch.classList.add('main__content__billing__ofandon__circle');
+		toggleSwitch.classList.remove('main__content__billing__ofandon__circle__toggle');
+	}
 	view.innerHTML = views[input.value].view.toUpperCase();
 	cost.innerHTML = views[input.value].price.toFixed(2);
 };
@@ -41,9 +45,11 @@ toggleHandler = () => {
 	if (toggleSwitch.classList.contains('main__content__billing__ofandon__circle')) {
 		toggleSwitch.classList.remove('main__content__billing__ofandon__circle');
 		toggleSwitch.classList.add('main__content__billing__ofandon__circle__toggle');
+		cost.innerHTML = (views[input.value].price * 25 / 100).toFixed(2);
 	} else {
 		toggleSwitch.classList.add('main__content__billing__ofandon__circle');
 		toggleSwitch.classList.remove('main__content__billing__ofandon__circle__toggle');
+        cost.innerHTML = views[input.value].price.toFixed(2);
 	}
 };
 
