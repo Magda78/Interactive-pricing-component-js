@@ -106,6 +106,8 @@ main {
 	-webkit-appearance: none;
 	width: 100%;
 	background: linear-gradient(90deg, rgb(236, 240, 251) 50%, rgb(236, 240, 251) 50%);
+    transition: 2s ease-in-out;
+   
 }
 .main__content__input input[type=range]::-webkit-slider-runnable-track {
 	-webkit-appearance: none;

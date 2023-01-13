@@ -26,12 +26,6 @@ const views = [
 	}
 ];
 
-const sliderTrackHandler = () => {
-	const value = input.value * 25;
-	const color = `linear-gradient(90deg, rgb(164, 243, 235) ${value}%, rgb(236, 240, 251) ${value}% )`;
-	input.style.background = color;
-};
-
 input.oninput = () => {
 	if (toggleSwitch.classList.contains('main__content__billing__ofandon__circle__toggle')) {
 		toggleSwitch.classList.add('main__content__billing__ofandon__circle');
@@ -39,6 +33,9 @@ input.oninput = () => {
 	}
 	view.innerHTML = views[input.value].view.toUpperCase();
 	cost.innerHTML = views[input.value].price.toFixed(2);
+    const value = input.value * 25;
+	const color = `linear-gradient(90deg, rgb(164, 243, 235) ${value}%, rgb(236, 240, 251) ${value}% )`;
+	input.style.background = color;
 };
 
 toggleHandler = () => {
@@ -54,5 +51,4 @@ toggleHandler = () => {
 };
 
 input.oninput();
-input.addEventListener('mousemove', sliderTrackHandler);
 toggleButton.addEventListener('click', toggleHandler);
