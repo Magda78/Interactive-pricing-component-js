@@ -50,5 +50,9 @@ toggleHandler = () => {
 	}
 };
 
+grabHandler = () => {
+    input.style.cursor = 'grab';
+}
 input.oninput();
 toggleButton.addEventListener('click', toggleHandler);
+input.addEventListener('click', grabHandler)

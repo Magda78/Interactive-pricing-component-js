@@ -20,7 +20,7 @@ h2 {
 h3 {
 	font-weight: bolder;
 	font-size: 12px;
-	font-color: #848ead;
+	color: #848ead;
 	letter-spacing: 1.71px;
 }
 p {
@@ -29,7 +29,7 @@ p {
 	color: #848ead;
 }
 hr {
-	border-top: 1px solid #ecf0fb;
+	border-top: 1px solid #d9d9d9;
 	width: 100%;
 	margin-bottom: 24px;
 }
@@ -53,7 +53,7 @@ main {
 	width: 100%;
 }
 .main {
-	padding: 89px 24px 88px 24px;
+	padding: 89px 25px 88px 24px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -63,8 +63,12 @@ main {
 	position: absolute;
 	top: 0;
 	right: 0;
-	height: 400px;
 	width: 100%;
+	height: 400px;
+}
+.main__pattern svg {
+	height: 380px;
+	width: auto;
 }
 .main__circle {
 	position: absolute;
@@ -86,6 +90,7 @@ main {
 	padding-right: 75px;
 }
 .main__content {
+	border-radius: 8px 8px 8px 8px;
 	background-color: white;
 	width: 100%;
 	display: flex;
@@ -105,14 +110,12 @@ main {
 .main__content__input input[type=range] {
 	-webkit-appearance: none;
 	width: 100%;
+	border-radius: 5px 5px 5px 5px;
 	background: linear-gradient(90deg, rgb(236, 240, 251) 50%, rgb(236, 240, 251) 50%);
-    transition: 2s ease-in-out;
-   
 }
 .main__content__input input[type=range]::-webkit-slider-runnable-track {
 	-webkit-appearance: none;
 	height: 8px;
-	border-radius: 5px;
 }
 .main__content__input input[type=range]::-webkit-slider-thumb {
 	box-shadow: 10px 10px 20px #a8f6ed;
@@ -123,10 +126,13 @@ main {
 	background-position: center;
 	border-radius: 50%;
 	background-color: #10d8c4;
-	cursor: pointer;
 	-webkit-appearance: none;
 	appearance: none;
 	margin-top: -15px;
+}
+.main__content__input input[type=range]::-webkit-slider-thumb:hover {
+	background-color: #7aeadf;
+	cursor: pointer;
 }
 .main__content__price {
 	font-weight: 600;
@@ -164,8 +170,8 @@ main {
 .main__content__billing {
 	width: 100%;
 	margin-right: 11px;
-	margin-top: 36px;
-	margin-bottom: 42px;
+	margin-top: 34px;
+	margin-bottom: 38px;
 	display: flex;
 	justify-content: end;
 	align-items: center;
@@ -217,19 +223,22 @@ main {
 	.main__content {
 		width: 540px;
 	}
+	.main__title {
+		margin-bottom: 92px;
+	}
 	.main__title h1 {
 		font-size: 28px;
+		margin-bottom: 11px;
 	}
 	.main__title h2 {
 		font-size: 15px;
 	}
 	.main__content {
-		padding-top: 58px;
+		padding: 58px 48px 32px 48px;
 		align-items: start;
 		position: relative;
 	}
 	.main__content h3 {
-		padding-left: 48px;
 		margin-bottom: 42px;
 	}
 	.main__content__price {
@@ -244,8 +253,6 @@ main {
 		margin-right: 8px;
 	}
 	.main__content__input {
-		padding-right: 48px;
-		padding-left: 48px;
 		width: 100%;
 	}
 	.main__content__billing {
@@ -257,7 +264,6 @@ main {
 		margin-top: 40px;
 		margin-bottom: 32px;
 	}
-
 	.main__content__plan__items {
 		display: flex;
 		flex-direction: column;
@@ -275,8 +281,6 @@ main {
 		width: 100%;
 		justify-content: space-between;
 		align-items: center;
-		padding-left: 48px;
-		padding-right: 48px;
 	}
 	button {
 		margin-top: 0;
@@ -293,5 +297,12 @@ main {
 	.main__content__billing__procent p {
 		display: flex;
 		align-items: center;
+	}
+	.main__pattern svg {
+		height: 449px;
+		width: auto;
+	}
+	.main__pattern {
+		height: 449px;
 	}
 }
